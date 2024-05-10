@@ -1,1 +1,18 @@
-#
+#Pull User swap volume by token
+query userSwapVolume {
+  positions {
+    account {
+      id
+      swaps {
+        amountIn
+        tokenIn {
+          symbol
+        }
+        amountOut
+        tokenOut {
+          symbol
+        }
+      }
+    }
+  }
+}
