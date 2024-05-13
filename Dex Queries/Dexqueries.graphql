@@ -16,3 +16,24 @@ query userSwapVolume {
     }
   }
 }
+
+#Pull user liquidity by pool
+query userLiqudity {
+  positions {
+    account {
+      id
+      positions {
+        cumulativeDepositTokenAmounts
+        cumulativeWithdrawTokenAmounts
+        liquidityUSD
+        cumulativeDepositUSD
+        cumulativeRewardUSD
+        cumulativeWithdrawUSD
+        id
+        pool{
+          id
+        }
+      }
+    }
+  }
+}
